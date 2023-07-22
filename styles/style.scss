@@ -7,6 +7,7 @@
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
+    font-family: 'texte';
 }
 
 /*fonts*/
@@ -14,7 +15,10 @@
     font-family: 'Titre';
     src: url(../fonts/Poppins-Bold.ttf);
 }
-
+@font-face {
+    font-family: 'texte';
+    src: url(../fonts/Poppins-Regular.ttf);
+}
 body{
     background: #f5f5f5;
 }
@@ -22,22 +26,34 @@ nav{
     height: 100px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     .logo{
         img{
             height: 100px;
         }
     }
     .nav-links{
+        align-content: flex-start;
         ul{
             display: flex;
             li{
                 margin: 10px;
+                a{
+                    color: #808080;
+                    transition: color .3s ease-in-out;
+                    &:hover{
+                        color: #000;
+                    }
+                }
             }
         }
     }
     .search{
         display: flex;
         align-items: center;
+        h3{
+            font-family: 'Titre';
+        }
         .search-field{
             img{
                 height: 70px;
@@ -47,6 +63,10 @@ nav{
 }
 
 /*Main page*/
+#none{
+    overflow: hidden;
+}
+
 .first{
     margin: 1% 2% 10px;
     padding: 5%;
@@ -70,6 +90,7 @@ nav{
 
 .field{
     height: 50px;
+    padding: 0 1em;
     border-radius: 25px;
     background-color: #f5f5f5;
     backdrop-filter: blur(7px);
@@ -82,17 +103,20 @@ nav{
     }
     img{
         height: 35px;
-        margin-right: 1em;
+        padding: 2px 1px;
     }
 }
 .second{
     display: flex;
+    flex-wrap: wrap;
+    transition: all .5s ease-in-out;
     .same{
         margin: 10px 2% 0;
         padding: 5%;
         height: 100%;
         border-radius: 30px;
         width: 50%;
+        flex: 1;
         h2{
             font-family: 'Titre';
             font-size: 3rem;
@@ -104,6 +128,9 @@ nav{
     }
     .two{
         background: url(../images/home/Message-box-2-small.png) 100%/25% no-repeat, url(../images/home/Message-box-1-big.png) 80%/50% no-repeat, url(../images/home/services-numériques-bg.jpg) center/cover no-repeat;
+    }
+    .plus{
+        width: inherit;
     }
 }
 
