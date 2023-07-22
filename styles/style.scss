@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*fonts*/
+@font-face {
+    font-family: 'Titre';
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+body{
+    background: #f5f5f5;
+}
+nav{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    .logo{
+        img{
+            height: 100px;
+        }
+    }
+    .nav-links{
+        ul{
+            display: flex;
+            li{
+                margin: 10px;
+            }
+        }
+    }
+    .search{
+        display: flex;
+        align-items: center;
+        .search-field{
+            img{
+                height: 70px;
+            }
+        }
+    }
+}
+
+/*Main page*/
+.first{
+    margin: 1% 2% 10px;
+    padding: 5%;
+    height: 85%;
+    border-radius: 30px;
+    background: url(../images/home/emoji-1.png) 90% 45%/25% no-repeat,
+    url(../images/home/laptop.png) 100% 80%/40% no-repeat,
+    url(../images/home/emoji-2.png) 93% 40%/7% no-repeat,
+    url(../images/home/phone.png) 100% 40%/17% no-repeat,
+    url(../images/home/depannage-bg.png) center/cover no-repeat;
+    .text{
+        width: 60%;
+        text-align: right;
+        h1{
+            color: #fff;
+            font-family: 'Titre';
+            font-size: 6rem;
+        }
+    }
+}
+
+.field{
+    height: 50px;
+    border-radius: 25px;
+    background-color: #f5f5f5;
+    backdrop-filter: blur(7px);
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin: 20px;
+    p{
+        margin: 0 auto;
+    }
+    img{
+        height: 35px;
+        margin-right: 1em;
+    }
+}
+.second{
+    display: flex;
+    .same{
+        margin: 10px 2% 0;
+        padding: 5%;
+        height: 100%;
+        border-radius: 30px;
+        width: 50%;
+        h2{
+            font-family: 'Titre';
+            font-size: 3rem;
+            color: #fff;
+        }
+    }
+    .one{
+        background: url(../images/home/fusée.png) right/50% no-repeat, url(../images/home/livraison-section-bg.jpg) center/cover no-repeat;
+    }
+    .two{
+        background: url(../images/home/Message-box-2-small.png) 100%/25% no-repeat, url(../images/home/Message-box-1-big.png) 80%/50% no-repeat, url(../images/home/services-numériques-bg.jpg) center/cover no-repeat;
+    }
+}
+
+
+/*footer*/
+footer{
+    margin: 15% 0 0;
+    padding: 5%;
+    background-color: #282828;
+    color: #fff;
+    .tsd{
+        img{
+            height: 100px;
+        }
+    }
+}
