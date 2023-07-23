@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/site.js"></script>
 </head>
 <body>
 <header>
@@ -12,10 +13,10 @@
         <div class="logo"><img src="images/home/logo.png" alt="logo Trust Digital Service"></div>
         <div class="nav-links">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Dépannage</a></li>
-                <li><a href="">Livraison</a></li>
-                <li><a href="">Service Numériques</a></li>
+                <li><span class="icons"><img src="images/icons/home-svgrepo-com.svg" alt=""></span><a href="">Home</a></li>
+                <li><span class="icons"><img src="images/icons/hardware-svgrepo-com.svg" alt=""></span><a href="">Dépannage</a></li>
+                <li><span class="icons"><img src="images/icons/sell-svgrepo-com.svg" alt=""></span><a href="">Livraison</a></li>
+                <li><span class="icons"><img src="images/icons/flash-drive-svgrepo-com.svg" alt=""></span><a href="">Service Numériques</a></li>
             </ul>
         </div>
         <div class="search">
@@ -23,13 +24,18 @@
             <div class="search-field">
                 <img src="images/home/search-sort-svgrepo-com.svg" alt="search icon">
             </div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </nav>
 </header>
 <main>
-    <div id="none" class="first">
+    <div id="none" class="first hov">
         <div class="text">
-            <h1>Dépannage.</h1>
+            <h1 data-text="Dépannage." class="scroll">Dépannage.</h1>
             <p>
                 Notre service de dépannage hardware et software est une solution complète pour 
                 résoudre les problèmes liés à vos appareils informatiques. Que vous ayez des soucis 
@@ -38,28 +44,29 @@
             </p>
         </div>
         <div class="field">
-            <p>Demander un dépannage</p>
-            <div class="set"><img src="images/home/settings-svgrepo-com.svg" alt="settings icons"></div>
+            <p class="texto">Demander un dépannage</p>
+            <div class="set ico"><img src="images/home/settings-svgrepo-com.svg" alt="settings icons"></div>
         </div>
     </div>
-    <div id="none" class="second">
-        <div class="one same">
-            <h2>Livraison & Expedition.</h2>
+    <div id="onee" class="second">
+        <div class="one same hov">
+            <h2 class="scroll">Livraison & Expedition.</h2>
             <div class="field plus">
-                <p class="more">Voir plus</p>
-                <div class="arrow"><img src="images/home/right-arrow-circle-svgrepo-com.svg" alt="right arrow icons"></div>
+                <p class="more texto">Voir plus</p>
+                <div class="arrow ico"><img src="images/home/right-arrow-circle-svgrepo-com.svg" alt="right arrow icons"></div>
             </div>
         </div>
-        <div class="two same">
-            <h2>Services Numériques</h2>
+        <div class="two same hov">
+            <h2 class="scroll">Services Numériques</h2>
             <div class="field plus">
-                <p class="more">Voir plus</p>
-                <div class="arrow"><img src="images/home/right-arrow-circle-svgrepo-com.svg" alt="right arrow icons"></div>
+                <p class="more texto">Voir plus</p>
+                <div class="arrow ico"><img src="images/home/right-arrow-circle-svgrepo-com.svg" alt="right arrow icons"></div>
             </div>
         </div>
     </div>
 </main>
 <footer>
+    <div class="blank"></div>
     <div class="tsd">
         <img src="images/home/logo.png" alt="logo Trust Service Digital">
     </div>
