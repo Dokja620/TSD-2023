@@ -16,7 +16,9 @@ toscrollElements.forEach((el) => observer.observe(el))
 let loader = document.getElementById('loader')
 
 window.addEventListener('load', function(){
-    loader.style.opacity = '0'
+    loader.style.transform = 'translateX(-100%)'
+    loader.classList.add('dissapear')
+    
 })
 
 //navbar

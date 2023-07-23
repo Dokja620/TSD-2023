@@ -31,10 +31,16 @@ body{
     width: 100%;
     position: fixed;
     z-index: 999;
-    transition: opacity 1s linear;
+    opacity: 1;
+    transition: transform .5s linear 1s, opacity .25s ease-in-out 1.2s;
 }
-
+#loader.dissapear{
+    opacity: 0;
+}
 /*nav bar*/
+.current{
+    color: #15191f;
+}
 nav{
     height: 100px;
     display: flex;
