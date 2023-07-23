@@ -11,3 +11,11 @@ const observer = new IntersectionObserver((entries) =>{
 })
 const toscrollElements = document.querySelectorAll('.scroll')
 toscrollElements.forEach((el) => observer.observe(el))
+
+//navbar
+let menu = document.querySelector('.burger')
+let menuToggle = document.querySelector('.nav-links')
+
+menu.onclick = function(){
+    menuToggle.classList.toggle('open')
+}

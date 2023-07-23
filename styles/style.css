@@ -39,6 +39,15 @@ nav .nav-links {
 nav .nav-links ul {
   display: flex;
 }
+nav .nav-links ul .icons {
+  margin-right: 10px;
+  transform: scale(0);
+  visibility: hidden;
+}
+nav .nav-links ul .icons img {
+  height: 25px;
+  transform: translateY(5px);
+}
 nav .nav-links ul li {
   margin: 10px;
 }
@@ -54,30 +63,85 @@ nav .nav-links ul li a::before {
   content: "";
   position: absolute;
   bottom: -2px;
-  left: 0;
   height: 2px;
-  width: 0%;
+  width: 100%;
   background: #282828;
   transform-origin: left;
-  transform: scale(0);
+  transform: scaleX(0);
   transition: all 0.5s ease-in-out;
 }
 nav .nav-links ul li a:hover::before {
-  width: 100%;
   transform-origin: right;
-  transform: scale(1);
+  transform: scaleX(1);
 }
 nav .search {
   display: flex;
-  align-items: center;
 }
 nav .search h3 {
   font-family: "Titre";
+  margin-right: 15px;
+}
+nav .search .search-field {
+  display: none;
 }
 nav .search .search-field img {
   height: 70px;
 }
+nav .burger {
+  display: none;
+  margin: 32px 20px;
+  cursor: pointer;
+}
+nav .burger .line {
+  height: 5px;
+  width: 25px;
+  border-radius: 2px;
+  background: #282828;
+  margin: 5px 0;
+}
 
+/*responsive*/
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  nav .logo img {
+    height: 100px;
+  }
+  nav .nav-links {
+    margin-top: -15px;
+    padding: 0 20px 15px 0;
+    background: rgba(245, 245, 245, 0.3764705882);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 20px 0;
+    border: 5px solid rgba(245, 245, 245, 0.1921568627);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  nav .nav-links ul {
+    flex-direction: column;
+  }
+  nav .nav-links ul .icons {
+    transform: scale(1);
+    visibility: visible;
+    margin-left: 15px;
+  }
+  nav .nav-links.open {
+    transform: translateX(0%);
+  }
+  nav .search {
+    position: absolute;
+    right: 0;
+  }
+  nav .search h3 {
+    margin: 35px 0;
+  }
+  nav .burger {
+    display: block;
+  }
+}
 /*Main page*/
 #none, #onee {
   overflow: hidden;
@@ -95,6 +159,7 @@ nav .search .search-field img {
   text-align: right;
 }
 .first .text h1 {
+  position: relative;
   color: #fff;
   font-family: "Titre";
   font-size: 6rem;
@@ -104,6 +169,7 @@ nav .search .search-field img {
   height: 50px;
   padding: 0 1em;
   border-radius: 25px;
+  border: 2px solid rgba(40, 40, 40, 0.2588235294);
   background: rgba(245, 245, 245, 0.2666666667);
   backdrop-filter: blur(5px);
   display: flex;
@@ -135,6 +201,71 @@ nav .search .search-field img {
   padding: 2px 1px;
 }
 
+/*responsive*/
+@media (max-width: 1095px) {
+  .field {
+    width: 35%;
+  }
+  .field:hover {
+    width: 40%;
+  }
+}
+@media (min-width: 675px) and (max-width: 925px) {
+  .first {
+    background: url(../images/home/emoji-1.png) 90% 65%/25% no-repeat, url(../images/home/laptop.png) 100% 80%/40% no-repeat, url(../images/home/emoji-2.png) 93% 40%/7% no-repeat, url(../images/home/phone.png) 100% 40%/17% no-repeat, url(../images/home/depannage-bg.png) center/cover no-repeat;
+  }
+  .field {
+    width: 56%;
+  }
+  .field:hover {
+    width: 60%;
+  }
+}
+@media (max-width: 675px) {
+  .first {
+    padding-top: 55%;
+    background: url(../images/home/emoji-1.png) 25% 10%/45% no-repeat, url(../images/home/laptop.png) 0% 10%/75% no-repeat, url(../images/home/emoji-2.png) 63% 12%/14% no-repeat, url(../images/home/phone.png) 70% 10%/30% no-repeat, url(../images/home/depannage-bg.png) center/cover no-repeat;
+  }
+  .first .text {
+    width: 100%;
+  }
+  .first .text h1 {
+    font-size: 5rem;
+  }
+  .field {
+    width: 75%;
+  }
+  .field:hover {
+    width: 80%;
+  }
+}
+@media (max-width: 575px) {
+  .first .text {
+    width: 100%;
+  }
+  .first .text h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 450px) {
+  .first .text h1 {
+    font-size: 3rem;
+  }
+  .field {
+    width: 92%;
+  }
+  .field:hover {
+    width: 95%;
+  }
+  .second .same h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 350px) {
+  .first .text h1 {
+    font-size: 2rem;
+  }
+}
 .second {
   display: flex;
   flex-wrap: wrap;
@@ -175,6 +306,7 @@ footer {
   position: relative;
 }
 footer .blank {
+  display: none;
   width: 75vw;
   height: 150px;
   background: #fff;
