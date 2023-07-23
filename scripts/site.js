@@ -12,6 +12,13 @@ const observer = new IntersectionObserver((entries) =>{
 const toscrollElements = document.querySelectorAll('.scroll')
 toscrollElements.forEach((el) => observer.observe(el))
 
+//loader
+let loader = document.getElementById('loader')
+
+window.addEventListener('load', function(){
+    loader.style.opacity = '0'
+})
+
 //navbar
 let menu = document.querySelector('.burger')
 let menuToggle = document.querySelector('.nav-links')
