@@ -31,10 +31,16 @@ body{
     cursor: pointer;
     transition: all .5s ease-in-out;
 }
+@media (max-width: 675px) {
+    .click{
+        width: 100%;
+    }
+}
 h2{
     font-family: 'texte';
     font-size: 1.2rem;
     color: #2a3457;
+    margin: 0 auto;
 }
 .click:hover{
     box-shadow: 0 0 10px #2a3457;
