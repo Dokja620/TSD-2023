@@ -164,6 +164,34 @@ nav .burger .line {
     display: block;
   }
 }
+/*footer*/
+footer {
+  margin: 25% 0 0;
+  padding: 5%;
+  background-color: #282828;
+  color: #fff;
+  position: relative;
+}
+footer .blank {
+  display: none;
+  width: 75vw;
+  height: 150px;
+  background: #fff;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 20px;
+  box-shadow: 0px -7px 20px 2px #808080;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+footer .tsd {
+  margin: 5% 0 0;
+}
+footer .tsd img {
+  height: 100px;
+}
+
 /*Main page*/
 #none, #onee {
   overflow: hidden;
@@ -222,7 +250,48 @@ nav .burger .line {
   padding: 2px 1px;
 }
 
-/*responsive*/
+.second {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.5s ease-in-out;
+}
+.second .same {
+  margin: 10px 2% 0;
+  padding: 5%;
+  height: 100%;
+  border-radius: 30px;
+  width: 50%;
+  flex: 1;
+}
+.second .same h2 {
+  font-family: "Titre";
+  font-size: 3rem;
+  color: #fff;
+}
+.second .one {
+  background: url(../images/home/fusée.png) right/50% no-repeat, url(../images/home/livraison-section-bg.jpg) center/cover no-repeat;
+}
+.second .two {
+  background: url(../images/home/Message-box-2-small.png) 100%/25% no-repeat, url(../images/home/Message-box-1-big.png) 80%/50% no-repeat, url(../images/home/services-numériques-bg.jpg) center/cover no-repeat;
+}
+.second .plus {
+  width: 50%;
+}
+.second .plus:hover {
+  width: 55%;
+}
+
+/*Cool hover effects*/
+.hov {
+  transition: all 0.5s ease-in-out;
+}
+
+.hov:hover > .field {
+  box-shadow: 0px 0px 20px 7px rgba(196, 13, 202, 0.6470588235);
+}
+
+/*scroll animation*/
+/*Responsive*/
 @media (max-width: 1095px) {
   .field {
     width: 35%;
@@ -287,74 +356,5 @@ nav .burger .line {
     font-size: 2rem;
   }
 }
-.second {
-  display: flex;
-  flex-wrap: wrap;
-  transition: all 0.5s ease-in-out;
-}
-.second .same {
-  margin: 10px 2% 0;
-  padding: 5%;
-  height: 100%;
-  border-radius: 30px;
-  width: 50%;
-  flex: 1;
-}
-.second .same h2 {
-  font-family: "Titre";
-  font-size: 3rem;
-  color: #fff;
-}
-.second .one {
-  background: url(../images/home/fusée.png) right/50% no-repeat, url(../images/home/livraison-section-bg.jpg) center/cover no-repeat;
-}
-.second .two {
-  background: url(../images/home/Message-box-2-small.png) 100%/25% no-repeat, url(../images/home/Message-box-1-big.png) 80%/50% no-repeat, url(../images/home/services-numériques-bg.jpg) center/cover no-repeat;
-}
-.second .plus {
-  width: 50%;
-}
-.second .plus:hover {
-  width: 55%;
-}
-
-/*footer*/
-footer {
-  margin: 25% 0 0;
-  padding: 5%;
-  background-color: #282828;
-  color: #fff;
-  position: relative;
-}
-footer .blank {
-  display: none;
-  width: 75vw;
-  height: 150px;
-  background: #fff;
-  margin: 0 auto;
-  position: absolute;
-  border-radius: 20px;
-  box-shadow: 0px -7px 20px 2px #808080;
-  top: -5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-footer .tsd {
-  margin: 5% 0 0;
-}
-footer .tsd img {
-  height: 100px;
-}
-
-/*Cool hover effects*/
-.hov {
-  transition: all 0.5s ease-in-out;
-}
-
-.hov:hover > .field {
-  box-shadow: 0px 0px 20px 7px rgba(196, 13, 202, 0.6470588235);
-}
-
-/*scroll animation*/
 
 /*# sourceMappingURL=style.css.map */

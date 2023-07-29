@@ -1,0 +1,28 @@
+
+/*footer*/
+footer{
+    margin: 25% 0 0;
+    padding: 5%;
+    background-color: #282828;
+    color: #fff;
+    position: relative;
+    .blank{
+        display: none;
+        width: 75vw;
+        height: 150px;
+        background: #fff;
+        margin: 0 auto;
+        position: absolute;
+        border-radius: 20px;
+        box-shadow: 0px -7px 20px 2px #808080;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .tsd{
+        margin: 5% 0 0;
+        img{
+            height: 100px;
+        }
+    }
+}
