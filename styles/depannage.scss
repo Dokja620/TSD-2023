@@ -1,0 +1,26 @@
+@import "./shared/default";
+@import "./shared/loader";
+@import "./shared/navbar";
+@import "./shared/footer";
+@import "./shared/field";
+
+.first{
+    margin: 1% 2% 10px;
+    padding: 5%;
+    height: 100%;
+    border-radius: 30px;
+    background: url(../images/home/emoji-1.png) 90% 45%/25% no-repeat,
+    url(../images/home/laptop.png) 100% 80%/40% no-repeat,
+    url(../images/home/emoji-2.png) 93% 40%/7% no-repeat,
+    url(../images/home/phone.png) 100% 40%/17% no-repeat,
+    url(../images/home/depannage-bg.png) center/cover no-repeat;
+    .text{
+        width: 60%;
+        text-align: right;
+        h1{
+            color: #fff;
+            font-family: 'Titre';
+            font-size: 6rem;
+        }
+    }
+}
