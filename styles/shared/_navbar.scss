@@ -27,12 +27,28 @@ nav{
             }
             li{
                 margin: 10px;
+                .current{
+                    color: #282828;
+                    font-weight: 600;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+                        height: 2px;
+                        width: 100%;
+                        background: #282828;
+                    }
+                }
                 a{
                     position: relative;
+                    text-decoration: none;
                     color: #808080;
-                    transition: color .5s ease-in-out;
+                    transition: color .5s linear;
                     &:hover{
                         color: #282828;
+                        font-weight: 600;
                     }
                     &::before{
                         content: '';

@@ -73,13 +73,29 @@ nav .nav-links ul .icons img {
 nav .nav-links ul li {
   margin: 10px;
 }
+nav .nav-links ul li .current {
+  color: #282828;
+  font-weight: 600;
+  position: relative;
+}
+nav .nav-links ul li .current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background: #282828;
+}
 nav .nav-links ul li a {
   position: relative;
+  text-decoration: none;
   color: #808080;
-  transition: color 0.5s ease-in-out;
+  transition: color 0.5s linear;
 }
 nav .nav-links ul li a:hover {
   color: #282828;
+  font-weight: 600;
 }
 nav .nav-links ul li a::before {
   content: "";
@@ -187,33 +203,38 @@ footer .blank {
 }
 footer .tsd {
   margin: 5% 0 0;
+  display: flex;
+  align-items: center;
+}
+footer .tsd span {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 footer .tsd img {
   height: 100px;
 }
 
-/*Main page*/
-#none, #onee {
-  overflow: hidden;
+a {
+  color: #fff;
+  text-decoration: underline;
 }
 
-.first {
-  margin: 1% 2% 10px;
-  padding: 5%;
-  height: 85%;
-  border-radius: 30px;
-  background: url(../images/home/emoji-1.png) 90% 45%/25% no-repeat, url(../images/home/laptop.png) 100% 80%/40% no-repeat, url(../images/home/emoji-2.png) 93% 40%/7% no-repeat, url(../images/home/phone.png) 100% 40%/17% no-repeat, url(../images/home/depannage-bg.png) center/cover no-repeat;
+a:active {
+  color: #fff;
 }
-.first .text {
-  width: 60%;
+
+.copyrights {
+  display: flex;
+  justify-content: space-between;
+}
+.copyrights h3 {
+  font-size: 0.9rem;
+}
+.copyrights .right {
   text-align: right;
 }
-.first .text h1 {
-  color: #fff;
-  font-family: "Titre";
-  font-size: 6rem;
-}
 
+/*the button like fields*/
 .field {
   height: 50px;
   padding: 0 1em;
@@ -250,6 +271,38 @@ footer .tsd img {
   padding: 2px 1px;
 }
 
+/*Cool hover effects*/
+.hov {
+  transition: all 0.5s ease-in-out;
+}
+
+.hov:hover > .field {
+  box-shadow: 0px 0px 20px 7px rgba(196, 13, 202, 0.6470588235);
+}
+
+/*scroll animation*/
+/*Main page*/
+#none, #onee {
+  overflow: hidden;
+}
+
+.first {
+  margin: 1% 2% 10px;
+  padding: 5%;
+  height: 85%;
+  border-radius: 30px;
+  background: url(../images/home/emoji-1.png) 90% 45%/25% no-repeat, url(../images/home/laptop.png) 100% 80%/40% no-repeat, url(../images/home/emoji-2.png) 93% 40%/7% no-repeat, url(../images/home/phone.png) 100% 40%/17% no-repeat, url(../images/home/depannage-bg.png) center/cover no-repeat;
+}
+.first .text {
+  width: 60%;
+  text-align: right;
+}
+.first .text h1 {
+  color: #fff;
+  font-family: "Titre";
+  font-size: 6rem;
+}
+
 .second {
   display: flex;
   flex-wrap: wrap;
@@ -281,16 +334,6 @@ footer .tsd img {
   width: 55%;
 }
 
-/*Cool hover effects*/
-.hov {
-  transition: all 0.5s ease-in-out;
-}
-
-.hov:hover > .field {
-  box-shadow: 0px 0px 20px 7px rgba(196, 13, 202, 0.6470588235);
-}
-
-/*scroll animation*/
 /*Responsive*/
 @media (max-width: 1095px) {
   .field {
