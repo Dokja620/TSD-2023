@@ -297,4 +297,34 @@ a:active {
   font-size: 6rem;
 }
 
+/*reparation types*/
+.genre {
+  display: flex;
+}
+.genre .img {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.genre .img img {
+  width: 100%;
+}
+.genre .site {
+  background: rgba(245, 245, 245, 0.5333333333);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  border: 3px solid rgba(40, 40, 40, 0.137254902);
+  margin: 10% 15px;
+  padding: 20px 30px;
+  text-align: justify;
+  width: 50%;
+}
+.genre .site h4 {
+  text-align: center;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
 /*# sourceMappingURL=depannage.css.map */
