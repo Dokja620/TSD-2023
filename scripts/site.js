@@ -28,3 +28,5 @@ let menuToggle = document.querySelector('.nav-links')
 menu.onclick = function(){
     menuToggle.classList.toggle('open')
 }
+
+//cursor
